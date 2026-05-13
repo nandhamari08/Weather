@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-glass: rgba(255, 255, 255, 0.75);
+  --color-glass-border: rgba(255, 255, 255, 0.5);
+  --color-primary: #3b82f6;
+}
+
+:root {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #1a1c1e;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8fafc;
+  overflow-x: hidden;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 24px -1px rgba(0, 0, 0, 0.05),
+    0 10px 40px -10px rgba(0, 0, 0, 0.05);
+}
+
+.premium-card {
+  background: white;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.03), 
+    0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+}
+
+/* Dynamic Gradients */
+.weather-gradient-sunny {
+  background: radial-gradient(circle at 0% 0%, #fffbf2 0%, #fff3c4 50%, #ffe4bc 100%);
+}
+
+.weather-gradient-cloudy {
+  background: radial-gradient(circle at 0% 0%, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+}
+
+.weather-gradient-rainy {
+  background: radial-gradient(circle at 0% 0%, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+}
+
+.weather-gradient-night {
+  background: radial-gradient(circle at 0% 0%, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+}
+
+.weather-gradient-default {
+  background: #f8fafc;
+}
+
+/* Animations */
+@keyframes aurora {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(360deg); }
+}
+
+.animate-aurora {
+  animation: aurora 20s linear infinite;
+}
+
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover-scale:hover {
+  transform: scale(1.02);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cbd5e1;
+}
