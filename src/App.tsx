@@ -168,7 +168,7 @@ function App() {
           </AnimatePresence>
         </main>
 
-        <footer className="mt-auto py-4 bg-white/40 backdrop-blur-md rounded-2xl border border-white/80 shadow-lg shadow-slate-200/10 flex justify-center items-center mb-4 mx-2">
+        <footer className="mt-12 py-4 bg-white/40 backdrop-blur-md rounded-2xl border border-white/80 shadow-lg shadow-slate-200/10 flex justify-center items-center mb-4 mx-2">
           <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.4em]">© 2026 SKYCAST GLOBAL SYSTEM</p>
         </footer>
       </div>
